@@ -73,7 +73,7 @@ func Path(from, to Pather) (path []Pather, distance float64, found bool) {
 			return p, current.cost, true
 		}
 
-
+		// examine neighbors of current
 		for _, neighbor := range current.pather.PathNeighbors() {
 			cost := current.cost + current.pather.PathNeighborCost(neighbor)
 			neighborNode := nm.get(neighbor)
